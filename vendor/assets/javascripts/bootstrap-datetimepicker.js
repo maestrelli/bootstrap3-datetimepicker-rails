@@ -461,7 +461,7 @@ THE SOFTWARE.
 
             nextMonth = moment(prevMonth).add(42, 'd');
             while (prevMonth.isBefore(nextMonth)) {
-                if (prevMonth.weekday() === moment().startOf('week').weekday()) {
+                if (prevMonth.weekday() === moment.localeData()._week.dow) {
                     row = $('<tr>');
                     html.push(row);
                     if (picker.options.calendarWeeks === true) {
